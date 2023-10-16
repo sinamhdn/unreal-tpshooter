@@ -1,0 +1,886 @@
+{
+	"folders": [
+		{
+			"name": "TPShooter",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "D:\\Program Files\\Epic Games\\UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"files.associations": {
+			"algorithm": "cpp",
+			"xiosbase": "cpp",
+			"xlocale": "cpp",
+			"xutility": "cpp",
+			"__locale": "cpp",
+			"ios": "cpp"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "TPShooter Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Test",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Test",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Test",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Shipping",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Shipping",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"Win64",
+					"Shipping",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Test",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Test",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Test",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Shipping",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Shipping",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooter IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooter IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooter",
+					"IOS",
+					"Shipping",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooterEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"Debug",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooterEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TPShooterEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"label": "TPShooterEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TPShooterEditor",
+					"Win64",
+					"Development",
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch TPShooter (Debug)",
+				"request": "launch",
+				"program": "D:\\Projects\\Unreal\\TPShooter\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "TPShooter Win64 Debug Build",
+				"args": [],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooter (DebugGame)",
+				"request": "launch",
+				"program": "D:\\Projects\\Unreal\\TPShooter\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "TPShooter Win64 DebugGame Build",
+				"args": [],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooter (Development)",
+				"request": "launch",
+				"program": "D:\\Projects\\Unreal\\TPShooter\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "TPShooter Win64 Development Build",
+				"args": [],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooter (Test)",
+				"request": "launch",
+				"program": "D:\\Projects\\Unreal\\TPShooter\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "TPShooter Win64 Test Build",
+				"args": [],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooter (Shipping)",
+				"request": "launch",
+				"program": "D:\\Projects\\Unreal\\TPShooter\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "TPShooter Win64 Shipping Build",
+				"args": [],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooterEditor (Debug)",
+				"request": "launch",
+				"program": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "TPShooterEditor Win64 Debug Build",
+				"args": [
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject"
+				],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooterEditor (DebugGame)",
+				"request": "launch",
+				"program": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "TPShooterEditor Win64 DebugGame Build",
+				"args": [
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject"
+				],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TPShooterEditor (Development)",
+				"request": "launch",
+				"program": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "TPShooterEditor Win64 Development Build",
+				"args": [
+					"D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject"
+				],
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\Program Files\\Epic Games\\UE_5.3"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "D:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=D:\\Projects\\Unreal\\TPShooter\\TPShooter.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "externalTerminal",
+				"stopAtEntry": false,
+				"cwd": "D:\\Program Files\\Epic Games\\UE_5.3"
+			}
+		]
+	}
+}
