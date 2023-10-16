@@ -1,20 +1,16 @@
 # TPShooter
-
 Third person shooter game practice project in Unreal Engine
 
 ## Unreal Engine Version
-
 5.3.1
 
 ## Asset Packs Used
-
 Paragon: Wraith
 Modular SciFi Season 1 Starter Bundle
 Modular Scifi Season 2 Starter Bundle
 Shooter Game only project assets
 
 ## Concepts Learned
-
 - Game Design architecture
 - Migrating assets from a project to other
 - Setting a map as default map of the editor
