@@ -52,6 +52,8 @@ Shooter Game only project assets
 - Sound Attunement and Spatialization is sound cue
 - Using AnimOffset assets to accumulate animation over other animations
 - Using animation state machines
+- Adding ambience sound to the game
+- Adding sound to a socket on skeleton
 
 IF YOUR GAME GLITCHES IN SOME POINTS OF MAP
 SOME ASSETS IN ASSET PACKS CAUSE COLLISION MESH ERROR
