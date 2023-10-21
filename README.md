@@ -54,6 +54,8 @@ Shooter Game only project assets
 - Using animation state machines
 - Adding ambience sound to the game
 - Adding sound to a socket on skeleton
+- Creating health system
+- Creating aim system
 
 IF YOUR GAME GLITCHES IN SOME POINTS OF MAP
 SOME ASSETS IN ASSET PACKS CAUSE COLLISION MESH ERROR
