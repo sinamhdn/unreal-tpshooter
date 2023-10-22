@@ -2,7 +2,7 @@
 Third person shooter game practice project in Unreal Engine
 
 ## Unreal Engine Version
-5.3.1
+5.3
 
 ## Asset Packs Used
 Paragon: Wraith
