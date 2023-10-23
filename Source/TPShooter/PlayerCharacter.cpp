@@ -62,7 +62,7 @@ float APlayerCharacter::TakeDamage(float DamageAmount, FDamageEvent const &Damag
 	DamageToApply = FMath::Min(Health, DamageToApply);
 	/////////////////////////////////////////////////////////////
 	Health -= DamageToApply;
-	UE_LOG(LogTemp, Warning, TEXT("Health left %f"), Health);
+	// UE_LOG(LogTemp, Warning, TEXT("Health left %f"), Health);
 
 	if (IsDead())
 	{

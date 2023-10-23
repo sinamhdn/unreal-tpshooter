@@ -48,14 +48,33 @@ void AWeapon::PullTrigger()
 
 		// sending the damage to the target
 		AActor *HitActor = Hit.GetActor();
+		
 		if (HitActor != nullptr)
 		{
+			// if (GetOwner() == nullptr) { return; }
+			// if (*(GetOwner()->Tags.GetData()) == *(HitActor->Tags.GetData())) return;
+			// UE_LOG(LogTemp, Warning, TEXT("The Actor's tags are %s and %s"), *(this->GetOwner()->Tags.GetData()->ToString()), *(HitActor->Tags.GetData()->ToString()));
+			// FString TestCondition = (*(GetOwner()->Tags.GetData()->ToString()) == *(HitActor->Tags.GetData()->ToString())) ? "true" : "false";
+			// UE_LOG(LogTemp, Warning, TEXT("The Actor's tag is %s."), *(GetOwner()->Tags.GetData()->ToString()));
+			
 			// if we have some kind of damage type like fire or poison damage we call replace nullptr
 			FPointDamageEvent DamageEvent(Damage, Hit, ShotDirection, nullptr);
 			AController *OwnerController = GetOwnerController();
 			// to avoid nullptr error
-			if (OwnerController == nullptr)
-				return;
+			if (OwnerController == nullptr) return;
+
+			/*
+			if (GetOwner()->Tags.GetData()->ToString() == FString(ANSI_TO_TCHAR("Enemy")))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Hello"));
+				if (HitActor->Tags.GetData()->ToString() == FString(ANSI_TO_TCHAR("Enemy")))
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Helloooooooo"));
+					return;
+				}
+			}
+			*/
+
 			HitActor->TakeDamage(Damage, DamageEvent, OwnerController, this);
 		}
 	}
@@ -98,8 +117,32 @@ bool AWeapon::WeaponTrace(FHitResult &Hit, FVector &ShotDirection)
 	FCollisionQueryParams Params;
 	Params.AddIgnoredActor(this);
 	Params.AddIgnoredActor(GetOwner());
+
+	// DOESNT WORK BECAUSE WE DON'T HAVE HITRESULT YET WE GET IT AFTER LINETRACE DONE
+	/*
+	AActor* HitActor = Hit.GetActor();
+	if (HitActor != nullptr)
+	{
+		if (GetOwner()->Tags.GetData()->ToString() == FString(ANSI_TO_TCHAR("Enemy")))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Hello"));
+			if (HitActor->Tags.GetData()->ToString() == FString(ANSI_TO_TCHAR("Enemy")))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Helloooooooo"));
+				Params.AddIgnoredActor(Hit.GetActor());
+			}
+		}
+	}
+	*/
+
 	// line trace the gun point
 	// Params are optional in this case we needed to pass them
+	// We added this line to stop enemies from killing eachother ECC_GameTraceChannel2 will be ignored by the enemy bp collision settings
+	if (GetOwner()->Tags.GetData()->ToString() == FString(ANSI_TO_TCHAR("Enemy")))
+	{
+		// GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Your Message"));
+		return GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECollisionChannel::ECC_GameTraceChannel2, Params);
+	}
 	return GetWorld()->LineTraceSingleByChannel(Hit, Location, End, ECollisionChannel::ECC_GameTraceChannel1, Params);
 }
 
