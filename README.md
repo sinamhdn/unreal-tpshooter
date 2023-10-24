@@ -57,6 +57,8 @@ Shooter Game only project assets
 - Adding sound to a socket on skeleton
 - Creating health system
 - Creating aim system
+- Adding and using tags on blueprint and c++
+- Changing collision and trace channel reaction type on a specific blueprint
 
 IF YOUR GAME GLITCHES IN SOME POINTS OF MAP
 SOME ASSETS IN ASSET PACKS CAUSE COLLISION MESH ERROR
