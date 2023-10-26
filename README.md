@@ -12,7 +12,7 @@ Modular SciFi Season 1 Starter Bundle
 Modular Scifi Season 2 Starter Bundle
 Shooter Game only project assets
 
-## Concepts Used
+## Features Used
 - Game Design architecture
 - Migrating assets from a project to other
 - Setting a map as default map of the editor
