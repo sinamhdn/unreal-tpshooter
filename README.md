@@ -61,6 +61,7 @@ Shooter Game only project assets
 - Adding and using tags on blueprint and c++
 - Changing collision and trace channel reaction type on a specific blueprint
 
+## Important Note
 IF YOUR GAME GLITCHES IN SOME POINTS OF MAP
 SOME ASSETS IN ASSET PACKS CAUSE COLLISION MESH ERROR
 TO FIX IT CHANGE TO VISIBILITY COLLISION OR PLAYER COLLISION
