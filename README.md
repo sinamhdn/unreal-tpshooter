@@ -52,8 +52,8 @@ Shooter Game only project assets
 - Using Audio Cue asset to add multiple audios to an asset or world
 - Randomize audios in Audio Cue
 - Sound Attunement and Spatialization is sound cue
-- Using AnimOffset assets to accumulate animation over other animations
-- Using animation state machines
+- AnimOffset assets to accumulate animation over other animations
+- Animation state machines
 - Adding ambience sound to the game
 - Adding sound to a socket on skeleton
 - Creating health system
