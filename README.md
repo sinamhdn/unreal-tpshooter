@@ -1,5 +1,5 @@
 # TPShooter
-Third person shooter game practice project in Unreal Engine 5
+Third person shooter game demoproject in Unreal Engine 5
 
 ![ScreenShot00000](https://github.com/sinamhdn/unreal-tpshooter/assets/34884156/d21e86f9-b8b5-4bfb-8be8-cd8fbfb3084e)
 
