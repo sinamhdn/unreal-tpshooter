@@ -7,10 +7,10 @@ Third person shooter game demo project in Unreal Engine 5
 5.3
 
 ## Asset Packs Used
-Paragon: Wraith
-Modular SciFi Season 1 Starter Bundle
-Modular Scifi Season 2 Starter Bundle
-Shooter Game only project assets
+- Paragon: Wraith
+- Modular SciFi Season 1 Starter Bundle
+- Modular Scifi Season 2 Starter Bundle
+- Shooter Game only project assets
 
 ## Concepts Used
 - Game Design architecture
@@ -62,12 +62,12 @@ Shooter Game only project assets
 - Changing collision and trace channel reaction type on a specific blueprint
 
 ## Important Note
-IF YOUR GAME GLITCHES IN SOME POINTS OF MAP
-SOME ASSETS IN ASSET PACKS CAUSE COLLISION MESH ERROR
-TO FIX IT CHANGE TO VISIBILITY COLLISION OR PLAYER COLLISION
-TO SEE COLLISION BOX OF OBJECTS AND EDIT THE COLLIION BOXES THAT ARE STICKING OUT
-
-EDIT SM_Ceilling_Ring_A2 ASSET AND REMOVE STICKING OUT PART FROM ITS COLLISION BOX
+IF YOUR GAME GLITCHES IN SOME POINTS OF MAP \
+SOME ASSETS IN ASSET PACKS CAUSE COLLISION MESH ERROR \
+TO FIX IT CHANGE TO VISIBILITY COLLISION OR PLAYER COLLISION \
+TO SEE COLLISION BOX OF OBJECTS AND EDIT THE COLLIION BOXES THAT ARE STICKING OUT \
+\
+EDIT SM_Ceilling_Ring_A2 ASSET AND REMOVE STICKING OUT PART FROM ITS COLLISION BOX \
 
 TO DISABLE DEFAULT GUN OF PARAGON WRAITH OPEN PLAYER ASSET YOU USE > SELECT SKELETON > HIDE weapon_r AND weapon_l
 YOU CAN DO THIS ALSO IN CODE IN CHARACTER BLUEPRINT OR ANIMATION BLUEPRINT
