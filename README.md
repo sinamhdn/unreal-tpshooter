@@ -1,4 +1,4 @@
-# TPShooter
+# TP Shooter
 Third person shooter game demo project in Unreal Engine 5
 
 ![ScreenShot00000](https://github.com/sinamhdn/unreal-tpshooter/assets/34884156/d21e86f9-b8b5-4bfb-8be8-cd8fbfb3084e)
@@ -6,13 +6,13 @@ Third person shooter game demo project in Unreal Engine 5
 ## Unreal Engine Version
 5.3
 
-## Asset Packs Used
+## Asset Packs
 - Paragon: Wraith
 - Modular SciFi Season 1 Starter Bundle
 - Modular Scifi Season 2 Starter Bundle
 - Shooter Game only project assets
 
-## Concepts Used
+## Concepts
 - Game Design architecture
 - Migrating assets from a project to other
 - Setting a map as default map of the editor
